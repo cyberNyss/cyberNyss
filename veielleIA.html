@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>veielleIA</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f4ec;
+      --panel: #fffdf8;
+      --text: #222222;
+      --muted: #6b655c;
+      --accent: #9d5c0d;
+      --border: #e7dcc8;
+      --code-bg: #f3ede2;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.65;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, #efe1c4 0, transparent 28%),
+        linear-gradient(180deg, #f9f6ef 0%, var(--bg) 100%);
+    }
+
+    main {
+      max-width: 920px;
+      margin: 40px auto;
+      padding: 32px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 20px 60px rgba(80, 61, 32, 0.08);
+    }
+
+    h1, h2, h3 {
+      line-height: 1.2;
+      margin-top: 1.8em;
+    }
+
+    h1:first-child {
+      margin-top: 0;
+    }
+
+    h1 {
+      color: var(--accent);
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: 1.45rem;
+    }
+
+    h3 {
+      font-size: 1.15rem;
+      color: #4b443c;
+    }
+
+    p, li, blockquote {
+      font-size: 1rem;
+    }
+
+    hr {
+      border: 0;
+      border-top: 1px solid var(--border);
+      margin: 2rem 0;
+    }
+
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+
+    code {
+      padding: 0.15rem 0.35rem;
+      border-radius: 6px;
+      background: var(--code-bg);
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 0.95em;
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border-radius: 12px;
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+    }
+
+    pre code {
+      padding: 0;
+      background: transparent;
+    }
+
+    blockquote {
+      margin: 1rem 0;
+      padding: 0.75rem 1rem;
+      border-left: 4px solid var(--accent);
+      background: #fbf5ea;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+
+    th, td {
+      border: 1px solid var(--border);
+      padding: 0.7rem;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #f6efe2;
+    }
+
+    a {
+      color: #0e5b8f;
+    }
+
+    .lead {
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Vocabulaire</h1>
+    <p><em>Le charting</em> : dans une UI (User Interface), cela correspond à l'intégration de graphiques interactifs pour visualiser des données de manière claire, exploitable et décisionnelle.</p>
+
+    <hr>
+
+    <h1>Rappel <strong>Markdown</strong> utilises pour organiser et structurer un texte</h1>
+
+    <hr>
+
+    <h1>1. Titres (hierarchie)</h1>
+    <p>Permettent de structurer comme un plan (chapitres, sous-parties).</p>
+    <pre><code class="language-markdown"># Titre niveau 1
+## Titre niveau 2
+### Titre niveau 3
+#### Titre niveau 4</code></pre>
+    <p class="lead">Exemple rendu :</p>
+    <h1>Titre 1</h1>
+    <h2>Titre 2</h2>
+    <h3>Titre 3</h3>
+    <p>Usage :</p>
+    <ul>
+      <li><code>#</code> - titre principal</li>
+      <li><code>##</code> - section</li>
+      <li><code>###</code> - sous-section</li>
+    </ul>
+
+    <hr>
+
+    <h1>2. Listes</h1>
+    <h2>Liste a puces</h2>
+    <pre><code class="language-markdown">- element 1
+- element 2
+  - sous-element</code></pre>
+    <p class="lead">Resultat :</p>
+    <ul>
+      <li>element 1</li>
+      <li>element 2</li>
+      <li>sous-element</li>
+    </ul>
+
+    <hr>
+
+    <h2>Liste numerotee</h2>
+    <pre><code class="language-markdown">1. premier
+2. deuxieme
+3. troisieme</code></pre>
+    <p class="lead">Resultat :</p>
+    <ol>
+      <li>premier</li>
+      <li>deuxieme</li>
+      <li>troisieme</li>
+    </ol>
+
+    <hr>
+
+    <h1>3. Mise en forme du texte</h1>
+    <pre><code class="language-markdown">*italique* ou _italique_
+**gras** ou __gras__
+***gras + italique***</code></pre>
+    <p class="lead">Resultat :</p>
+    <ul>
+      <li><em>italique</em></li>
+      <li><strong>gras</strong></li>
+      <li><strong><em>gras + italique</em></strong></li>
+    </ul>
+
+    <hr>
+
+    <h1>4. Code</h1>
+    <h2>Code inline</h2>
+    <pre><code class="language-markdown">`code`</code></pre>
+    <p>Exemple : <code>SELECT * FROM table</code></p>
+
+    <hr>
+
+    <h2>Bloc de code</h2>
+    <pre><code class="language-markdown">```sql
+SELECT * FROM stock;
+```</code></pre>
+    <p class="lead">Resultat :</p>
+    <pre><code class="language-sql">SELECT * FROM stock;</code></pre>
+
+    <hr>
+
+    <h1>5. Liens</h1>
+    <pre><code class="language-markdown">[Texte du lien](https://example.com)</code></pre>
+    <p>Exemple : <a href="https://google.com">Google</a></p>
+
+    <hr>
+
+    <h1>6. Images</h1>
+    <pre><code class="language-markdown">![alt](url_image)</code></pre>
+
+    <hr>
+
+    <h1>7. Citations</h1>
+    <pre><code class="language-markdown">&gt; Ceci est une citation</code></pre>
+    <p class="lead">Resultat :</p>
+    <blockquote>Ceci est une citation</blockquote>
+
+    <hr>
+
+    <h1>8. Tableaux</h1>
+    <pre><code class="language-markdown">| Produit | Stock |
+|--------|------|
+| A      | 100  |
+| B      | 50   |</code></pre>
+    <p class="lead">Resultat :</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Produit</th>
+          <th>Stock</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>A</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td>B</td>
+          <td>50</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr>
+
+    <h1>9. Ligne de separation</h1>
+    <pre><code class="language-markdown">---</code></pre>
+    <p class="lead">Resultat :</p>
+    <hr>
+
+    <h1>10. Checklist (tres utile)</h1>
+    <pre><code class="language-markdown">- [ ] A faire
+- [x] Fait</code></pre>
+    <p class="lead">Resultat :</p>
+    <ul>
+      <li>[ ] A faire</li>
+      <li>[x] Fait</li>
+    </ul>
+
+    <hr>
+
+    <h1>11. Synthese structuree</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Element</th>
+          <th>Symbole principal</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Titre</td>
+          <td><code>#</code></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Liste</td>
+          <td><code>-</code> ou <code>1.</code></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Gras</td>
+          <td><code>**</code></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Italique</td>
+          <td><code>*</code></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Code</td>
+          <td><code>`</code></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Lien</td>
+          <td><code>[ ] ( )</code></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Citation</td>
+          <td><code>&gt;</code></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Tableau</td>
+          <td><code>|</code></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Separateur</td>
+          <td><code>---</code></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr>
+
+    <h1>12. Version simple (niveau 10 ans)</h1>
+    <p>Markdown = ecrire du texte avec des petits symboles pour le rendre joli.</p>
+    <ul>
+      <li><code>#</code> - faire un titre</li>
+      <li><code>-</code> - faire une liste</li>
+      <li><code>**</code> - mettre en gras</li>
+      <li><code>`</code> - montrer du code</li>
+    </ul>
+    <p>C'est comme donner une <strong>forme lisible</strong> a tes idees sans utiliser Word.</p>
+
+    <hr>
+
+    <h1>Astuce avancee (pour toi)</h1>
+    <p>Vu ton usage (Power BI / SQL / Rust), Markdown est parfait pour :</p>
+    <ul>
+      <li>documenter tes requetes SQL</li>
+      <li>structurer tes projets data</li>
+      <li>creer des README (GitHub)</li>
+      <li>expliquer tes pipelines supply chain</li>
+    </ul>
+
+    <hr>
+
+    <p>Si tu veux, je peux te faire un <strong>template Markdown pret a l'emploi</strong> pour tes projets data / supply chain / Rust.</p>
+  </main>
+</body>
+</html>
